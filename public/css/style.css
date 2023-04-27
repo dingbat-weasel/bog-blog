@@ -1,3 +1,11 @@
+header {
+  background-color: #056605;
+}
+
+main {
+  background-color: #51b151;
+}
+
 header,
 .article:not(:last-child) {
   border-bottom: 1px solid #ccc;
@@ -16,10 +24,4 @@ header,
 .no-button:hover {
   color: #065b83;
   text-decoration: underline;
-}
-
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
 }
