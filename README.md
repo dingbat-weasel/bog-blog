@@ -21,7 +21,7 @@ This fantastic little project is a fledgling blog site where you can post about 
 
 Just requires a signup and you're ready to go!
 
-![screenshot](.\assets\screencap.JPG)
+![screenshot](/assets/screencap.JPG)
 
 ## Credits
 
