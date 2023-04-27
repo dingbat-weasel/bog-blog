@@ -1,16 +1,29 @@
+<!-- Loop over each object in the articles array -->
 {{#each articles as |article|}}
-  <main class="container">
-    <section>
+  <div class='row mb-4 article'>
+    <div class='col-md-5'>
       <h2>
-        <a href="/article/{{article.id}}">{{article.title}}</a>
+        <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+        {{{get_emoji}}}
+        <a href='/article/{{article.id}}'>{{article.name}}</a>
       </h2>
-      <p>Created by:
+      <p>
+        <span for='img' aria-label='money'>💲</span>
+        <!-- Pass needed_funding value to the helper function -->
+        <span class='dollar-amount'>{{format_amount
+            article.needed_funding
+          }}</span>
+        needed!
+      </p>
+      <p>Created by
         {{article.user.name}}
         on
         {{format_date article.date_created}}</p>
-      <div>
-        <p>{{article.content}}</p>
-      </div>
-    </section>
-  </main>
+    </div>
+    <div class='col-md-7'>
+      <p>
+        {{article.description}}
+      </p>
+    </div>
+  </div>
 {{/each}}
